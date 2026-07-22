@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <g transform="rotate(-40 50 50)" stroke="#000" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- chama -->
+    <polygon points="40,74 50,96 60,74" fill="#ffc93f" />
+    <!-- corpo -->
+    <rect x="36" y="30" width="28" height="46" rx="14" fill="#e7ebee" />
+    <!-- aleta esquerda -->
+    <polygon points="38,58 18,84 38,76" fill="#e0261f" />
+    <!-- aleta direita -->
+    <polygon points="62,58 82,84 62,76" fill="#c11f19" />
+    <!-- nariz -->
+    <path d="M50 6 C 60 14 66 26 64 34 L 36 34 C 34 26 40 14 50 6 Z" fill="#ff4b3e" />
+    <!-- janela -->
+    <circle cx="50" cy="46" r="11" fill="#e0261f" />
+    <circle cx="50" cy="46" r="7" fill="#7fd4f5" stroke-width="3" />
+  </g>
+</svg>

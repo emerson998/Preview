@@ -710,3 +710,14 @@ main { max-width: 1040px; }
 .project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
 .button-primary { box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 25%, transparent); }
 @media (prefers-reduced-motion: reduce) { .project-card:hover { transform: none; } }
+
+/* Executive hero and measurable impact */
+.hero { align-items: center; }
+.hero-avatar { width: clamp(120px, 19vw, 200px); height: clamp(120px, 19vw, 200px); border-radius: 24px; }
+.hero-text h1 { font-family: var(--sans); font-weight: 800; font-size: clamp(2.5rem, 5.5vw, 4.6rem); letter-spacing: -.055em; line-height: 1.08; }
+.impact-strip { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.impact-strip > div { flex: 1 1 130px; padding: 16px; background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 12px; display: flex; flex-direction: column; }
+.impact-strip strong { font-size: 1.45rem; line-height: 1.2; letter-spacing: -.04em; color: var(--accent); }
+.impact-strip span { font-size: .78rem; color: var(--text-muted); margin-top: 5px; }
+@media (max-width: 720px) { .hero-avatar { width: 112px; height: 112px; } .impact-strip > div { flex-basis: 95px; padding: 12px; } }
+@media print { .impact-strip > div { border: 1px solid #ddd; } }

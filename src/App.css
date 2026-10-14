@@ -703,3 +703,10 @@ main { max-width: 1040px; }
   .skill-tag { padding: 2px 6px; border: 1px solid #ddd; }
   .contact-list { gap: 0; }
 }
+
+/* Red visual identity */
+.hero-avatar { box-shadow: 0 14px 42px color-mix(in srgb, var(--accent) 20%, transparent); }
+.project-card { border-top: 3px solid var(--accent); transition: transform .2s ease, border-color .2s ease; }
+.project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.button-primary { box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 25%, transparent); }
+@media (prefers-reduced-motion: reduce) { .project-card:hover { transform: none; } }

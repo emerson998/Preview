@@ -71,7 +71,7 @@ export const profile: Profile = {
   avatarUrl: "/foto.png",
   introduction: "Tech Lead Sênior na Solutis Tecnologias, liderando times de desenvolvimento, decisões de arquitetura, modernização de legados para microsserviços e SPA, além de iniciativas com LLMs e automação com IA.",
   summary:
-    "Desenvolvedor Back-End com experiência sólida em Java e Python, atuando no desenvolvimento de sistemas " +
+    "Tech Lead Sênior com experiência em liderança técnica, arquitetura de software e modernização de sistemas legados. Atuação com Java e Python no desenvolvimento de sistemas " +
     "robustos e escaláveis. Domínio em arquiteturas baseadas em eventos síncronos e assíncronos, com vivência " +
     "em REST APIs, mensageria (Kafka, RabbitMQ) e processamento reativo. Aderência a princípios SOLID e Clean " +
     "Architecture, com domínio em queries avançadas (SQL, JPQL, Criteria Builder). Experiência em " +

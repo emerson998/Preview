@@ -7,7 +7,7 @@ export function Footer({ name }: FooterProps) {
   return (
     <footer className="site-footer">
       <p>
-        © {year} {name}. Feito com React + Vite.
+        © {year} {name}. Java, Python e engenharia de software.
       </p>
     </footer>
   );

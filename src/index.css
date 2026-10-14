@@ -4,7 +4,7 @@
   --text: #2b2a33;
   --text-muted: #6b6875;
   --border: #e6e3e8;
-  --accent: #8a4fff;
+  --accent: #6835c9;
   --accent-contrast: #ffffff;
   --tag-bg: #f1edf9;
   --tag-text: #5b3b9e;
@@ -83,4 +83,11 @@ a:hover {
 button {
   font-family: inherit;
   cursor: pointer;
+}
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+section { scroll-margin-top: 100px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

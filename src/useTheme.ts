@@ -1,26 +1,18 @@
 import { useEffect, useState } from "react";
-
 export type Theme = "light" | "dark";
-
 const STORAGE_KEY = "resume-theme";
-
 function getInitialTheme(): Theme {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "light" || stored === "dark") return stored;
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "light" || stored === "dark") return stored;
+  } catch { /* Storage can be unavailable in private or restricted browsers. */ }
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
-
 export function useTheme(): [Theme, () => void] {
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
-
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(STORAGE_KEY, theme);
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch { /* Theme still works without persistence. */ }
   }, [theme]);
-
-  function toggleTheme() {
-    setTheme((t) => (t === "light" ? "dark" : "light"));
-  }
-
-  return [theme, toggleTheme];
+  return [theme, () => setTheme(t => t === "light" ? "dark" : "light")];
 }

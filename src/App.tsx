@@ -7,6 +7,7 @@ import { Experience } from "./components/Experience";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { profile } from "./data/profile";
 import { useTheme } from "./useTheme";
@@ -18,8 +19,10 @@ function App() {
   return (
     <>
       <Header name={profile.name} theme={theme} githubUrl={githubUrl} onToggleTheme={toggleTheme} />
-      <main>
+      <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <main id="conteudo" tabIndex={-1}>
         <Hero profile={profile} />
+        <Projects profile={profile} />
         <About profile={profile} />
         <Experience profile={profile} />
         <Skills profile={profile} />

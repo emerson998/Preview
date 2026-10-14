@@ -30,7 +30,7 @@ garantem que você não esqueça nenhum campo obrigatório.
 
 ## Baixar como PDF
 
-O botão "Baixar PDF" no cabeçalho chama a impressão do navegador (`window.print()`). O CSS em
+O botão "Salvar PDF" no cabeçalho chama a impressão do navegador (`window.print()`). O CSS em
 `src/App.css` (bloco `@media print`) já esconde o cabeçalho/rodapé e ajusta o layout pra ficar
 limpo no PDF — sem precisar de nenhuma biblioteca de geração de PDF.
 
@@ -58,5 +58,14 @@ src/
 ├── App.css               # layout e estilos de cada seção + regras de impressão
 └── index.css             # reset global e variáveis de tema (cores, fontes)
 ```
-# Preview
-# Preview
+## Qualidade e manutenção
+
+Execute `npm ci`, `npm run lint` e `npm run build` antes de publicar.
+O botão Salvar PDF abre o diálogo de impressão: escolha **Salvar como PDF**.
+Projetos cadastrados em `profile.projects` aparecem automaticamente. Não publique
+código privado ou métricas não verificadas. E-mail e LinkedIn podem ser incluídos
+em `profile.contacts` quando seus endereços forem confirmados.
+
+Ao mudar o domínio, atualize a URL canônica e os metadados Open Graph em `index.html`.
+O menu mobile oferece fechamento por Escape e links inacessíveis quando fechado;
+o tema respeita a preferência inicial do sistema e funciona sem localStorage.

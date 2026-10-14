@@ -53,6 +53,7 @@ export interface Profile {
   title: string;
   location: string;
   summary: string;
+  introduction: string;
   avatarUrl: string | null;
   contacts: ContactLink[];
   experience: ExperienceItem[];
@@ -68,6 +69,7 @@ export const profile: Profile = {
   title: "Desenvolvedor Back-End · Java & Python",
   location: "São Paulo, SP",
   avatarUrl: "/foto.png",
+  introduction: "Desenvolvo APIs e microsserviços com Java e Python, conectando sistemas com foco em resiliência, qualidade e manutenção. Experiência com Spring Boot, FastAPI e arquiteturas orientadas a eventos.",
   summary:
     "Desenvolvedor Back-End com experiência sólida em Java e Python, atuando no desenvolvimento de sistemas " +
     "robustos e escaláveis. Domínio em arquiteturas baseadas em eventos síncronos e assíncronos, com vivência " +
@@ -79,7 +81,7 @@ export const profile: Profile = {
   contacts: [
     { label: "(11) 93225-8211", href: "tel:+5511932258211", icon: "phone" },
     { label: "github.com/emerson998", href: "https://github.com/emerson998", icon: "github" },
-    { label: "São Paulo, SP", href: "#", icon: "location" },
+
   ],
   experience: [
     {
@@ -169,7 +171,7 @@ export const profile: Profile = {
   languages: [],
   certificates: [
     {
-      label: "Certificado completo de cursos",
+      label: "Formação continuada em tecnologia",
       issuer: "Alura",
       href: "https://cursos.alura.com.br/user/oemerson1000/fullCertificate/af23fa8126b9a8412038291cfaf3aca4",
     },

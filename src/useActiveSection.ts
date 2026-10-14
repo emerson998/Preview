@@ -1,28 +1,20 @@
 import { useEffect, useState } from "react";
-
-/** Observa quais seções (por id) estão visíveis na viewport e retorna o id da
- * mais proeminente no momento — usado pro indicador do menu acompanhar o
- * scroll (scroll spy). */
 export function useActiveSection(ids: string[]): string | null {
   const [active, setActive] = useState<string | null>(null);
-
   useEffect(() => {
-    const elements = ids.map((id) => document.getElementById(id)).filter((el): el is HTMLElement => el !== null);
-    if (elements.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) setActive(visible[0].target.id);
-      },
-      { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
-    );
-
-    for (const el of elements) observer.observe(el);
-    return () => observer.disconnect();
+    const elements = ids.map(id => document.getElementById(id)).filter((el): el is HTMLElement => el !== null);
+    let frame = 0;
+    function update() {
+      frame = 0;
+      const current = elements.filter(el => el.getBoundingClientRect().top <= 160).at(-1);
+      const atBottom = window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      setActive(atBottom ? elements.at(-1)?.id ?? null : current?.id ?? null);
+    }
+    function onScroll() { if (!frame) frame = requestAnimationFrame(update); }
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
   }, [ids]);
-
   return active;
 }

@@ -66,10 +66,10 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Emerson Andrade de Oliveira",
-  title: "Desenvolvedor Back-End · Java & Python",
+  title: "Tech Lead Sênior · Engenharia de Software & IA",
   location: "São Paulo, SP",
   avatarUrl: "/foto.png",
-  introduction: "Desenvolvo APIs e microsserviços com Java e Python, conectando sistemas com foco em resiliência, qualidade e manutenção. Experiência com Spring Boot, FastAPI e arquiteturas orientadas a eventos.",
+  introduction: "Tech Lead Sênior na Solutis Tecnologias, liderando times de desenvolvimento, decisões de arquitetura, modernização de legados para microsserviços e SPA, além de iniciativas com LLMs e automação com IA.",
   summary:
     "Desenvolvedor Back-End com experiência sólida em Java e Python, atuando no desenvolvimento de sistemas " +
     "robustos e escaláveis. Domínio em arquiteturas baseadas em eventos síncronos e assíncronos, com vivência " +
@@ -81,35 +81,54 @@ export const profile: Profile = {
   contacts: [
     { label: "(11) 93225-8211", href: "tel:+5511932258211", icon: "phone" },
     { label: "github.com/emerson998", href: "https://github.com/emerson998", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/emerson-oliveira-eng/", icon: "linkedin" },
 
   ],
   experience: [
     {
-      role: "Software Engineer",
-      company: "Solutis",
-      start: "Out/2025",
+      role: "Tech Lead Sênior",
+      company: "Solutis Tecnologias",
+      location: "São Paulo, Brasil · Híbrido",
+      start: "Set/2026",
       end: "Atual",
       highlights: [
-        "Desenvolvimento e manutenção de microsserviços em Java (Spring Boot) e Python (FastAPI).",
-        "Implementação de comunicação assíncrona com mensageria e eventos.",
-        "Integração de sistemas e APIs RESTful em ambientes de alta disponibilidade.",
-        "Aplicação de padrões de resiliência e observabilidade em arquiteturas distribuídas.",
-        "Participação ativa em cerimônias ágeis e code reviews.",
+        "Liderança técnica do time de desenvolvimento e orientação de profissionais júnior, pleno e sênior.",
+        "Condução de iniciativas estratégicas com LLMs (IA generativa) e automação de tarefas repetitivas.",
+        "Definição de arquitetura e migração de sistemas legados para microsserviços com SPA, preservando comportamentos existentes.",
+        "Code reviews e entrega de soluções seguras, escaláveis e alinhadas ao negócio.",
+      ],
+    },
+    {
+      role: "Engenheiro de Software Sênior",
+      company: "Solutis Tecnologias",
+      location: "São Paulo, Brasil · Híbrido",
+      start: "Out/2025",
+      end: "Set/2026",
+      highlights: [
+        "Desenvolvimento e manutenção de APIs e serviços backend em Java (Spring Boot) e Python (FastAPI) para o cliente Santander.",
+        "Integração de sistemas, testes automatizados e otimização de processos em equipes ágeis.",
+        "Sustentação de APIs críticas com mais de 500 mil transações por dia e 99,95% de disponibilidade.",
       ],
     },
     {
       role: "Desenvolvedor Java Pleno",
       company: "Almaviva Solutions",
-      start: "Out/2021",
+      start: "Jan/2024",
       end: "Out/2025",
       highlights: [
-        "Desenvolvimento de aplicações back-end em Java e Python para sistemas corporativos.",
-        "Aplicação de princípios SOLID e Clean Architecture para código limpo, desacoplado e de fácil manutenção.",
-        "Criação e consumo de APIs REST e integração com serviços externos.",
-        "Construção de queries avançadas com SQL nativo, JPQL e Criteria Builder (JPA).",
-        "Implementação de fluxos de eventos síncronos e assíncronos para processamento de dados.",
-        "Utilização de bancos de dados relacionais (PostgreSQL, MySQL) e práticas de DevOps com CI/CD e Docker.",
-        "Colaboração em equipes multidisciplinares seguindo metodologias ágeis (Scrum/Kanban).",
+        "Desenvolvimento de sistemas corporativos da Prodesp com Java e ecossistema Spring.",
+        "Liderança técnica em partes do projeto, code reviews e acompanhamento do ciclo de desenvolvimento até o deploy.",
+        "Liderança de integrações entre mais de 15 sistemas, com 98% de taxa de sucesso nas entregas.",
+      ],
+    },
+    {
+      role: "Desenvolvedor Java Júnior",
+      company: "Almaviva Solutions",
+      start: "Out/2021",
+      end: "Dez/2023",
+      highlights: [
+        "Desenvolvimento e manutenção de sistemas da Prodesp com Java e Spring.",
+        "Participação em mais de 20 code reviews e manutenção de aplicações com 8 integrações ativas.",
       ],
     },
   ],
